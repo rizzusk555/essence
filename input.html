@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Email Input</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 30px;
+    background: #f5f6f7;
+  }
+  .box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: auto;
+  }
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+  }
+
+  /* ✔ Light gray placeholder (hint text) */
+  input::placeholder,
+  textarea::placeholder {
+    color: #9ca3af;     /* soft light gray */
+    opacity: 1;         /* ensures consistent display */
+  }
+
+  button {
+    padding: 12px 16px;
+    background: #1a73e8;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  button:hover { background: #0f5ecf; }
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <h2>Enter Email Details</h2>
+
+  <form action="preview.html">
+    <label>Subject:</label>
+    <input name="subject" required 
+      placeholder="Re: Sick Leave Request / Resignation / Meeting Update">
+
+    <label>Date:</label>
+    <input name="date" required 
+      placeholder="Tuesday, March 4, 2025 10:30 AM">
+
+    <label>From Name:</label>
+    <input name="fromName" required 
+      placeholder="John Doe / HR Department / Manager">
+
+    <label>From Email:</label>
+    <input name="fromEmail" required 
+      placeholder="john.doe@company.com">
+
+    <label>To Name:</label>
+    <input name="toName" required 
+      placeholder="Team Lead / HR / Supervisor">
+
+    <label>Body:</label>
+    <textarea name="body" rows="6" required
+      placeholder="Dear Sir/Madam,
+
+I am writing to request sick leave for today as I am experiencing high fever. I will submit a medical certificate upon joining.
+
+Thank you,
+John Doe"></textarea>
+
+    <button type="submit">Generate Email</button>
+  </form>
+</div>
+
+</body>
+</html>
